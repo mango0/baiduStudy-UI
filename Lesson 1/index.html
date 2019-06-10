@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No.1 - 制作一个简单的菜单动画效果</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div>
+  <span class="text">
+    前端学院
+  </span>
+
+  <button class="btn">
+    切换样式
+  </button>
+</div>
+<script>
+let text = document.getElementsByClassName('text')[0];
+let btn = document.getElementsByClassName('btn')[0];
+
+btn.addEventListener('click', function() {
+    text.classList.toggle('active');
+})
+</script>
+</body>
+</html>
