@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @mixin transition($s) {
   -webkit-transition: all $s;
   -moz-transition: all $s;

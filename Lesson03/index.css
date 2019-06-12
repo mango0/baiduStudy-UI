@@ -50,7 +50,7 @@ body {
   border-radius: 10% 100% 0% 50%;
   background: #f1ac2b; }
 
-/* 澶村彂 */
+/* 头发 */
 .hair {
   position: absolute;
   width: 120px;
@@ -61,7 +61,7 @@ body {
   background: #f3b32e;
   border-radius: 50% 50% 50% 50%; }
 
-/* 鐪肩潧 */
+/* 眼睛 */
 .eye-wrap {
   position: absolute;
   width: 280px;
@@ -136,7 +136,7 @@ body {
   -o-transition: all 0.5s;
   transition: all 0.5s; }
 
-/* 榧诲瓙 */
+/* 鼻子 */
 .nose {
   width: 20px;
   height: 10px;
@@ -147,7 +147,7 @@ body {
   margin-left: -10px;
   position: absolute; }
 
-/* 鍢村反 */
+/* 嘴巴 */
 .mouth-wrap {
   position: absolute;
   top: 168px;
@@ -181,7 +181,7 @@ body {
   left: auto;
   right: 0; }
 
-/*榧犳爣hover鏍峰紡 鍐欏湪杩欓噷*/
+/*鼠标hover样式 写在这里*/
 .face:hover .eye-core {
   -webkit-transform: scale(0.8, 1);
   -moz-transform: scale(0.8, 1);
