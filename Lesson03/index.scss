@@ -246,7 +246,7 @@ body {
       height: 100px;
       border: 2px solid #3f200b;
 
-      @includ transition(.5s);
+      @include transition(.5s);
     }
     .left {
       left: 28px;
