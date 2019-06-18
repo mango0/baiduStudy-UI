@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No.6 - 利用 CSS animation 制作一个炫酷的 Slider</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="pic">
+        <img src="img/00.jpeg" alt="">
+        <img src="img/01.jpeg" alt="">
+        <img src="img/02.jpeg" alt="">
+        <img src="img/03.jpeg" alt="">
+        <img src="img/04.jpeg" alt="">
+    </div>
+    <div class="thumb">
+        <img src="img/00.jpeg" alt="">
+        <img src="img/01.jpeg" alt="">
+        <img src="img/02.jpeg" alt="">
+        <img src="img/03.jpeg" alt="">
+        <img src="img/04.jpeg" alt="">
+    </div>
+</div>
+<script>
+    var thumb = document.querySelector('.thumb'),
+        thumbImg = thumb.getElementsByTagName('img'),
+        pic = document.querySelector('.pic'),
+        picImg = pic.getElementsByTagName('img');
+
+    for(let i = 0;i < thumbImg.length;i++) {
+        thumbImg[i].addEventListener('click', function() {
+            let siblings = getSiblings(picImg[i]);
+
+            picImg[i].className = 'active';
+
+            for(let j = 0;j < siblings.length;j++) {
+                // 如果兄弟元素有'active'，则置为空
+                if(siblings[j].className === 'active') {
+                    siblings[j].className = '';
+                }
+            }
+
+        })
+    }
+
+
+    // 获取兄弟元素
+    function getSiblings(elm) {
+        var arr = [];
+        var children = elm.parentNode.children;
+        for(let i =0;i < children.length;i++) {
+            if(children[i] !== elm) arr.push(children[i]);
+        }
+        return arr;
+    }
+</script>
+</body>
+</html>
