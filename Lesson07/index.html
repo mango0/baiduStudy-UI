@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="header">
+    <img class="bg" src="img/back.png" alt="">
+    <div class="container">
+        <div class="content">
+            <h1><b>ECharts</b>数据可视化实验室</h1>
+            <p class="synopsis">由百度 ECharts 团队创建，联合公司内外众多数据可视化从业人组成的技术研究虚拟组织，致力于数据可视化的相关研究、教育普及、产品研发及生态建设。</p>
+        </div>
+        <div id="animation" class="animation"></div>
+    </div>
+
+</div>
+<script src="js/lottie.js"></script>
+<script>
+    var b = lottie.loadAnimation({
+        container: document.getElementById('animation'), // the dom element that will contain the animation
+        renderer: 'svg', //渲染出来的是什么格式
+        loop: true,  //循环播放
+        autoplay: true, //自动播放
+        path: 'data1.json' // the path to the animation json
+    });
+</script>
+</body>
+</html>
