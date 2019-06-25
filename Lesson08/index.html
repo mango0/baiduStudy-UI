@@ -15,8 +15,21 @@
         </div>
         <div id="animation" class="animation"></div>
     </div>
-
 </div>
+<section>
+    <div class="container">
+        <div class="card_wrapper">
+            <div class="top">
+                <div id="card" class="icon"></div>
+            </div>
+            <div class="bottom">
+                <h2>教程</h2>
+                <p>教程是入门的捷径，请从这里开始了解San。</p>
+            </div>
+        </div>
+    </div>
+
+</section>
 <script src="js/lottie.js"></script>
 <script>
     var b = lottie.loadAnimation({
@@ -24,8 +37,24 @@
         renderer: 'svg', //渲染出来的是什么格式
         loop: true,  //循环播放
         autoplay: true, //自动播放
-        path: 'data1.json' // the path to the animation json
+        path: 'json/data1.json' // the path to the animation json
     });
+
+
+    var animation2 = lottie.loadAnimation({
+        container: document.getElementById('card'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'json/data2.json'
+    })
+    var card = document.querySelector('.card_wrapper');
+    card.onmouseover = function () {
+        animation2.play();
+    }
+    card.onmouseout = function () {
+        animation2.stop();
+    }
 </script>
 </body>
 </html>
